@@ -1,0 +1,120 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  width: 480px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #1e1e1e;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4d4d4;
+}
+
+.close {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+}
+.close:hover { color: #d4d4d4; }
+
+.body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.input {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #d4d4d4;
+  font-size: 13px;
+  padding: 8px 12px;
+  outline: none;
+  font-family: inherit;
+}
+.input:focus { border-color: #3794ff; }
+
+.hints {
+  font-size: 11px;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hints code {
+  color: #4ec9b0;
+  font-family: 'Fira Code', monospace;
+}
+
+.status {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.scanning { background: #1a2a1a; color: #4ec9b0; }
+.done { background: #1a2a1a; color: #4caf50; }
+.error { background: #2a1a1a; color: #e74c3c; }
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 12px 18px;
+  border-top: 1px solid #1e1e1e;
+}
+
+.cancelBtn {
+  background: none;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.cancelBtn:hover { border-color: #444; color: #d4d4d4; }
+
+.scanBtn {
+  background: #1e3a5f;
+  border: 1px solid #2a4a6f;
+  color: #3794ff;
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+}
+.scanBtn:hover:not(:disabled) { background: #2a4a7f; }
+.scanBtn:disabled { opacity: 0.5; cursor: not-allowed; }
