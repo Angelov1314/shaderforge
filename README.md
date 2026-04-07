@@ -7,6 +7,7 @@ A local Shadertoy-compatible GLSL IDE with Monaco editor, real-time WebGL previe
 - **Live WebGL Preview** — Shadertoy-compatible uniforms (`iTime`, `iResolution`, `iMouse`, `iFrame`) with real-time recompile on edit
 - **Monaco Editor** — Full GLSL syntax highlighting and editing experience
 - **AI Shader Generation** — Describe a shader in natural language; Claude streams GLSL directly into the editor
+- **Shadertoy URL Import** — Paste a `shadertoy.com/view/…` link to extract and load the GLSL directly into the editor, with optional AI rewrite
 - **Template Library** — Browse and load shaders from a local database (`~/.claude/template-forge/db.json`)
 - **GitHub Scanner** — Scan public shader repos and add them to your local template DB
 - **Export** — Save as `.glsl` file or standalone `preview.html`
@@ -37,6 +38,7 @@ shaderforge/
 │   │   ├── Editor/        # Monaco GLSL editor
 │   │   ├── Preview/       # WebGL canvas + Shadertoy uniforms
 │   │   ├── Sidebar/       # Template library + scan modal
+│   │   ├── Toolbar/       # URL bar for Shadertoy import
 │   │   └── GeneratePanel/ # AI generation UI + SSE streaming
 │   ├── lib/
 │   │   ├── platform.ts    # FS abstraction (web ↔ Tauri)
